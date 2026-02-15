@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+    <meta charset="UTF-8">
+    <title>מפיק שם פרטי מקובץ CSV/XLSX</title>
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
+
+    <script defer src="script.js"></script>
+</head>
+<body>
+
+    <h1>יצירת עמודת "שם פרטי" מעמודת "שם"</h1>
+
+    <input type="file" id="fileInput" accept=".csv,.xlsx,.xls">
+    <button id="processBtn">לעבד קובץ</button>
+
+    
+
+    <br>
+    <a id="downloadLink" style="display:none;">להוריד קובץ חדש</a>
+    <br><br>
+
+    <button id="toggleTitlesBtn" class="small-btn">לשנות תארים</button>
+
+    <div id="titlesContainer" class="hidden">
+        <h3>רשימת תארים (שורה לכל תואר):</h3>
+        <textarea id="titlesBox" rows="8"></textarea>
+    </div>
+</body>
+</html>
