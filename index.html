@@ -3,32 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <title>מפיק שם פרטי מקובץ CSV/XLSX</title>
+
+    <!-- קובץ העיצוב -->
     <link rel="stylesheet" href="style.css">
 
+    <!-- ספריות לעיבוד קבצים -->
     <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
-
     <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
 
+    <!-- קובץ ה-JS שלך -->
     <script defer src="script.js"></script>
 </head>
+
 <body>
+    <div class="container">
 
-    <h1>יצירת עמודת "שם פרטי" מעמודת "שם"</h1>
+        <h1>יצירת עמודת "שם פרטי" מעמודת "שם"</h1>
 
-    <input type="file" id="fileInput" accept=".csv,.xlsx,.xls">
-    <button id="processBtn">לעבד קובץ</button>
+        <input type="file" id="fileInput" accept=".csv,.xlsx,.xls">
+        <button id="processBtn">לעבד קובץ</button>
 
-    
+        <br>
+        <a id="downloadLink" style="display:none;">להוריד קובץ חדש</a>
+        <br><br>
 
-    <br>
-    <a id="downloadLink" style="display:none;">להוריד קובץ חדש</a>
-    <br><br>
+        <button id="toggleTitlesBtn" class="small-btn">לשנות תארים - בזיהוי תואר השם הפרטי יהיה המילה השנייה</button>
 
-    <button id="toggleTitlesBtn" class="small-btn">לשנות תארים</button>
+        <div id="titlesContainer" class="hidden">
+            <h3>רשימת תארים (שורה לכל תואר):</h3>
+            <textarea id="titlesBox" rows="8"></textarea>
+        </div>
 
-    <div id="titlesContainer" class="hidden">
-        <h3>רשימת תארים (שורה לכל תואר):</h3>
-        <textarea id="titlesBox" rows="8"></textarea>
     </div>
 </body>
 </html>
